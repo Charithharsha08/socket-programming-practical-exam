@@ -60,6 +60,7 @@ public class ClientController {
         if (!message.isEmpty()) {
             try {
                 outputStream.writeUTF(userName.getText().trim() + ": " + message);
+                appendMessage(userName.getText().trim() + ": " + message);
                 outputStream.flush();
                 msgInput.clear();
             } catch (IOException e) {
